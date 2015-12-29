@@ -1,4 +1,5 @@
 module.exports = (function() {
+
   function quickSort(arry) {
 
     if(!Array.isArray(arry)) {
@@ -11,6 +12,9 @@ module.exports = (function() {
 
 
     for(var i= 1; i < arry.length; i++) {
+      if((typeof arry[i] !=='number') || isNaN(arry[i])) {
+        throw new TypeError('Please give me an array of numbers');
+      }
       if(pivot >=arry[i]) {
         left.push(arry[i]);
         } else if (pivot <= arry[i]) {
