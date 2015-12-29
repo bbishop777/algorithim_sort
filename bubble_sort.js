@@ -1,4 +1,5 @@
 module.exports = (function() {
+  var swaps = [];
 
   function bubble(arry) {
 
@@ -27,6 +28,7 @@ module.exports = (function() {
       }
 
       else if((arry[x+1]===undefined) && count>0) {
+        swaps.push(count);
         return bubble(arry);
       }
 
