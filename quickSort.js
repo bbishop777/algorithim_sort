@@ -1,5 +1,9 @@
 module.exports = (function() {
   function quickSort(arry) {
+
+    if(!Array.isArray(arry)) {
+      throw new TypeError('Please give me an array');
+    }
     var left = [];
     var right = [];
     var pivot = arry[0];
