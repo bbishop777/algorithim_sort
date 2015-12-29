@@ -20,8 +20,46 @@ describe('bubble', function() {
   it('should throw an error if argument is not an array', function() {
     var boundFn = bubble.bind(null, 'Hello, there');
 
-      expect(boundFn).to.throw(TypeError);
-      expect(boundFn).to.throw(TypeError, 'Please give me an array');
+    expect(boundFn).to.throw(TypeError);
+    expect(boundFn).to.throw(TypeError, 'Please give me an array');
+
+    boundFn = bubble.bind(null, NaN);
+
+    expect(boundFn).to.throw(TypeError);
+    expect(boundFn).to.throw(TypeError, 'Please give me an array');
+
+    boundFn = bubble.bind(null, 'boolean');
+
+    expect(boundFn).to.throw(TypeError);
+    expect(boundFn).to.throw(TypeError, 'Please give me an array');
+
+    boundFn = bubble.bind(null, {});
+
+    expect(boundFn).to.throw(TypeError);
+    expect(boundFn).to.throw(TypeError, 'Please give me an array');
+
+  });
+
+  it('should throw an error if elements of array are not a number', function() {
+    var boundFn = bubble.bind(null, [5, 7, "pig", "buggy"]);
+
+    expect(boundFn).to.throw(TypeError);
+    expect(boundFn).to.throw(TypeError, 'Please give me an array of numbers');
+
+    boundFn = bubble.bind(null, [5, 7, null, null]);
+
+    expect(boundFn).to.throw(TypeError);
+    expect(boundFn).to.throw(TypeError, 'Please give me an array of numbers');
+
+    boundFn = bubble.bind(null, [5, 7, true, false]);
+
+    expect(boundFn).to.throw(TypeError);
+    expect(boundFn).to.throw(TypeError, 'Please give me an array of numbers');
+
+    boundFn = bubble.bind(null, [5, 7 , {car: 'blue'}]);
+
+    expect(boundFn).to.throw(TypeError);
+    expect(boundFn).to.throw(TypeError, 'Please give me an array of numbers');
 
   });
 
