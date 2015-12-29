@@ -15,7 +15,13 @@ describe('bubble', function() {
 
     expect(result).to.be.a('array');
     expect(result).to.deep.equal([1, 2, 3]);
+  });
 
+  it('should throw an error if argument is not an array', function() {
+    var boundFn = bubble.bind(null, 'Hello, there');
+
+      expect(boundFn).to.throw(TypeError);
+      expect(boundFn).to.throw(TypeError, 'Please give me an array');
 
   });
 
