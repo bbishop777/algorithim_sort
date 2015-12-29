@@ -2,39 +2,39 @@ var chai = require('chai');
 chai.should();
 var expect = chai.expect;
 
-var bubble  = require('../bubble_sort.js');
+var bubbleSort  = require('../bubble_sort.js');
 var quickSort = require('../quickSort.js');
 
 describe('bubble', function() {
   it('should exist', function() {
-    expect(bubble).to.exist;
-    expect(bubble).to.be.a('function');
+    expect(bubbleSort).to.exist;
+    expect(bubbleSort).to.be.a('function');
   });
 
   it('should return a sorted array, if given an unsorted array.', function(){
-    var result = bubble([3, 2, 1]);
+    var result = bubbleSort.bubble([3, 2, 1]);
 
     expect(result).to.be.a('array');
     expect(result).to.deep.equal([1, 2, 3]);
   });
 
   it('should throw an error if argument is not an array', function() {
-    var boundFn = bubble.bind(null, 'Hello, there');
+    var boundFn = bubbleSort.bind(null, 'Hello, there');
 
     expect(boundFn).to.throw(TypeError);
     expect(boundFn).to.throw(TypeError, 'Please give me an array');
 
-    boundFn = bubble.bind(null, NaN);
+    boundFn = bubbleSort.bind(null, NaN);
 
     expect(boundFn).to.throw(TypeError);
     expect(boundFn).to.throw(TypeError, 'Please give me an array');
 
-    boundFn = bubble.bind(null, 'boolean');
+    boundFn = bubbleSort.bind(null, 'boolean');
 
     expect(boundFn).to.throw(TypeError);
     expect(boundFn).to.throw(TypeError, 'Please give me an array');
 
-    boundFn = bubble.bind(null, {});
+    boundFn = bubbleSort.bind(null, {});
 
     expect(boundFn).to.throw(TypeError);
     expect(boundFn).to.throw(TypeError, 'Please give me an array');
@@ -42,22 +42,22 @@ describe('bubble', function() {
   });
 
   it('should throw an error if elements of array are not a number', function() {
-    var boundFn = bubble.bind(null, [5, 7, "pig", "buggy"]);
+    var boundFn = bubbleSort.bind(null, [5, 7, "pig", "buggy"]);
 
     expect(boundFn).to.throw(TypeError);
     expect(boundFn).to.throw(TypeError, 'Please give me an array of numbers');
 
-    boundFn = bubble.bind(null, [5, 7, null, null]);
+    boundFn = bubbleSort.bind(null, [5, 7, null, null]);
 
     expect(boundFn).to.throw(TypeError);
     expect(boundFn).to.throw(TypeError, 'Please give me an array of numbers');
 
-    boundFn = bubble.bind(null, [5, 7, true, false]);
+    boundFn = bubbleSort.bind(null, [5, 7, true, false]);
 
     expect(boundFn).to.throw(TypeError);
     expect(boundFn).to.throw(TypeError, 'Please give me an array of numbers');
 
-    boundFn = bubble.bind(null, [5, 7 , {car: 'blue'}]);
+    boundFn = bubbleSort.bind(null, [5, 7 , {car: 'blue'}]);
 
     expect(boundFn).to.throw(TypeError);
     expect(boundFn).to.throw(TypeError, 'Please give me an array of numbers');
@@ -76,7 +76,7 @@ describe('quickSort', function() {
   it('should return a sorted array, if given an unsorted array.', function(){
     var result = quickSort([3, 2, 1]);
 
-    expect(result).to.be.a('array');
+    expect(result).to.be.an('array');
     expect(result).to.deep.equal([1, 2, 3]);
   });
 

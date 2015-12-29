@@ -1,4 +1,4 @@
-module.exports = (function() {
+var bubbleSort = (function() {
   var swaps = [];
 
   function bubble(arry) {
@@ -40,3 +40,4 @@ module.exports = (function() {
 
   return bubble;
 })();
+module.exports = bubbleSort;
