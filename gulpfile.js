@@ -13,7 +13,9 @@ gulp.task('build', function() {
 
 gulp.task('watch', function () {
   gulp.watch('./js/*', ['build', 'livereload']);
-  gulp.watch('./css/*', ['livereload']);
+  gulp.watch('./css/*.css', ['livereload']);
+  gulp.watch('./scss/*.scss', ['sass', 'livereload']);
+  gulp.watch('./public/index.html', ['livereload']);
 });
 
 gulp.task('connect', function() {

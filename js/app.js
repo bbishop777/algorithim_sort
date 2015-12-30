@@ -7,4 +7,3 @@ var quickSort = quickSortModule;
 var mergeSort = mergerSortModule;
 
 console.log(mergeSort([4, 19, 5, 1]), "mergeSort");
-
