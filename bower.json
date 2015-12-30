@@ -1,0 +1,22 @@
+{
+  "name": "bubble-sort",
+  "description": "There are many algorithms that deal with sorting collections of data. One of the most basic forms of sorting is known as __Bubble Sort__ and is named by it's nature of the order of data having a \"bubbling\" effect as a collection of data is sorted. We will start off by implementing a Bubble Sort algorithm on a one-dimensional Array.",
+  "main": "index.js",
+  "authors": [
+    "BBishop <brad.bishop68@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/bbishop777/bubble-sort",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Snap.svg": "snap.svg#~0.4.1"
+  }
+}
