@@ -13,7 +13,7 @@ var mergeSortModule = (function() {
 
 
     if(len >= 2) {
-      var mid = (Math.floor((len)/2)-1);
+      var mid = (Math.floor(len/2))-1;
       for(var x=0; x<len; x++) {
 
       if((typeof arry[x] !=='number') || isNaN(arry[x])) {

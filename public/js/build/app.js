@@ -55,9 +55,9 @@ var bubble = bubbleModule;
 var quickSort = quickSortModule;
 var mergeSort = mergerSortModule;
 
-console.log(mergeSort([4, 19, 5, 1]), "mergeSort");
+console.log(mergeSort([4, 19, 5, 1, 8]), "mergeSort");
 
-}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_dc265925.js","/")
+}).call(this,require("pBGvAp"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_15442e3a.js","/")
 },{"./bubble_sort.js":1,"./merge_sort.js":3,"./quick_sort.js":4,"buffer":6,"pBGvAp":8}],3:[function(require,module,exports){
 (function (process,global,Buffer,__argument0,__argument1,__argument2,__argument3,__filename,__dirname){
 "use strict";
@@ -75,7 +75,7 @@ var mergeSortModule = (function() {
 
 
     if(len >= 2) {
-      var mid = (Math.floor((len)/2)-1);
+      var mid = (Math.floor(len/2))-1;
       for(var x=0; x<len; x++) {
 
       if((typeof arry[x] !=='number') || isNaN(arry[x])) {
